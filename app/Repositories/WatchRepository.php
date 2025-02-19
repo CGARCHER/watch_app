@@ -56,7 +56,7 @@ class WatchRepository
      */
     public function find($id)
     {
-        return Watch::find($id)->with('feature','strap','type')->first();
+        return Watch::with(['feature', 'strap', 'type'])->find($id);
     }
 
     /**
